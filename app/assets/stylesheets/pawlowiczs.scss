@@ -109,7 +109,7 @@ html, body
   background-image: image-url('pawlowicz.png');
   background-position: right top;
   height: 250px;
-  background-size: auto 260px;
+  background-size: contain;
   background-repeat: no-repeat;
   display: table;
 }

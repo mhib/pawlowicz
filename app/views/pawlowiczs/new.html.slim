@@ -1,0 +1,5 @@
+.container
+  = simple_form_for @quote, url: pawlowiczs_path do |f|
+    = f.input :body, as: :text, input_html: { maxlength: 180 }
+    = f.input :author, input_html: { maxlength: 50 }
+    = f.button :submit,  "Stwórz"

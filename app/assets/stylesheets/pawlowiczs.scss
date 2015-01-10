@@ -1,0 +1,127 @@
+// Place all the styles related to the pawlowiczs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//
+@import "bootstrap/variables";
+@import "layout";
+#content{
+  font-family: 'Berkshire Swash', cursive;
+  top: 40%;
+  vertical-align: middle;
+  position: absolute;
+  margin: 0;
+  left: 30%;
+  margin-right: -50%;
+  max-width: 100%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+}
+
+#content > h1
+{
+  font-size: 500%;
+}
+
+#mark
+{
+  position: absolute;
+  bottom: $height;
+  left: 0;
+  background-color: darken($gray-lighter, 10%);
+  width: 100%;
+  padding: 1px;
+}
+
+#qq
+{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.back_link
+{
+  text-align: left;
+  display: block;
+  float: left;
+  padding-left: 1pt;
+}
+
+#ocen {
+  width: 100%;
+  text-align: center;
+}
+
+.green
+{
+  color: green;
+}
+
+.red
+{
+  color: red;
+
+}
+
+.stats
+{
+  float: right;
+  padding-right: 5pt;
+}
+
+#pawlowicz
+{
+  position: absolute;
+  margin-left: 50%;
+  width: 50%;
+  margin-right: -15px;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: -999;
+}
+
+.index_quote
+{
+  overflow: hidden;
+}
+
+.index_quote > span, .index_quote > h3{
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.quote
+{
+  border: 1px solid lighten(gray, 30%);
+  background-image: image-url('pawlowicz.png');
+  background-position: right top;
+  height: 250px;
+  background-size: auto 260px;
+  background-repeat: no-repeat;
+  display: table;
+}
+
+.index_quote
+{
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 14pt;
+  width: 90%;
+  color: black;
+}
+
+.quote_span
+{
+  font-size: 400%;
+}
+
+.score
+{
+  color: white;
+  background-color: black;
+  display: none;
+}
+
+.pawlowicz:hover .score
+{
+  display: table;
+}

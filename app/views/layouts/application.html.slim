@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | K
+    link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    = render 'layouts/nav' unless @no_nav
+    = yield
+    .footer
+      .container
+        | 2015 source on github

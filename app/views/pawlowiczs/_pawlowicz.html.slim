@@ -1,0 +1,30 @@
+.pawlowicz
+  = link_to pawlowicz_path(pawlowicz.id), data: { 'no-turbolink' => true } do
+    .row
+      .col-md-12.quote
+        .index_quote
+          span.quote_span
+            | #{pawlowicz.body}
+          h3
+            | ~  #{pawlowicz.author}
+  .row
+    .col-md-12.score
+      | Wyświetlono 
+      span.views_count data-id="#{pawlowicz.id}"
+        |  #{pawlowicz.views} razy 
+      |  Ocena: 
+      span.vote_rating_count data-id="#{pawlowicz.id}"
+        | #{pawlowicz.vote}
+      |  / 
+      span.vote_count data-id="#{pawlowicz.id}"
+        | #{pawlowicz.votes.size}
+      .rate
+        = link_to pawlowicz_votes_path(pawlowicz.id), class: 'green vote_link' do
+          | plus
+        |  
+        |  czy 
+        = link_to pawlowicz_votes_path(pawlowicz.id), class: 'red vote_link' do
+          | minus
+        |  
+        | ~Magik
+

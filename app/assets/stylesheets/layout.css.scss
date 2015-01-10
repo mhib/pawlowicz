@@ -1,0 +1,15 @@
+@import "bootstrap/variables";
+$height: 2 * $font-size-base + 1pt;
+body
+{
+  padding-bottom: $height;
+}
+.footer {
+  width: 100;
+  bottom: 0;
+  height: $height;
+  width: 100%;
+  position: fixed;
+  background-color: #f5f5f5;
+}
+

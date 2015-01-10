@@ -1,0 +1,10 @@
+.content
+  .row
+    .col-md-6.col-md-offset-3
+      - @quotes.each do |q|
+        = render 'pawlowicz', pawlowicz: q
+        .row
+          .col-md-12 style="height: 5pt"
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      = will_paginate @quotes, renderer: BootstrapPagination::Rails

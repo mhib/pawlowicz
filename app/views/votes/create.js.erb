@@ -1,0 +1,2 @@
+$('.vote_rating_count[data-id=<%= @quote.id %>]').text("<%= @quote.vote %>");
+$('.vote_count[data-id=<%= @quote.id %>]').text("<%= @quote.votes.size %>")

@@ -1,0 +1,36 @@
+- @no_nav = true
+audio#audio autoplay="true"
+  source src="/audios/background.mp3" type="audio/mpeg"
+  source src="/audios/background.ogg" type="audio/ogg"
+div style="width: 100%;overflow=hidden"
+  #content.col-md-6
+    h1
+      | #{@quote.body}
+    h2
+      | ~ #{@quote.author}
+
+  #pawlowicz
+    = image_tag 'pawlowicz.png', style: "width: 800px"
+
+  #mark
+    #ocen
+      = link_to pawlowicz_votes_path(@quote.id), class: 'green vote_link' do
+        | plus
+      |  
+      |  czy 
+      = link_to pawlowicz_votes_path(@quote.id), class: 'red vote_link' do
+        | minus
+      |  
+      | ~Magik
+    = link_to root_path, class: 'back_link', data: { 'no-turbolik' => true } do
+      | <- Strona główna
+    .stats
+      | Wyświetlono 
+      span.views_count data-id="#{@quote.id}"
+        |  #{@quote.views} razy 
+      |  Ocena: 
+      span.vote_rating_count data-id="#{@quote.id}"
+        | #{@quote.vote}
+      |  / 
+      span.vote_count data-id="#{@quote.id}"
+        | #{@quote.votes.size}

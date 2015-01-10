@@ -2,15 +2,14 @@
 audio#audio autoplay="true"
   source src="/audios/background.mp3" type="audio/mpeg"
   source src="/audios/background.ogg" type="audio/ogg"
-div style="width: 100%;overflow=hidden"
-  #content.col-md-6
+#pawlowicz
+#lip
+  #quote_content
     h1
       | #{@quote.body}
     h2
       | ~ #{@quote.author}
 
-  #pawlowicz
-    = image_tag 'pawlowicz.png', style: "width: 800px"
 
   #mark
     #ocen

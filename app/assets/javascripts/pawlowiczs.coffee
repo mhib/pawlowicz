@@ -15,7 +15,6 @@ $ ->
       error: (x, t, e) ->
         alert x.responseJSON.error
     }
-  $("#pawlowicz > img").animate {
-    width: "1000px"
-    margin: "0 0 10% -10%"
+  $("#pawlowicz").animate {
+    width: "500px"
   }, 15000, ->

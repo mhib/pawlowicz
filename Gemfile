@@ -9,6 +9,8 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'active_link_to'
 
+gem 'thin'
+
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'simple_form', '~> 3.1.0'

@@ -1,14 +1,13 @@
 nav.navbar.navbar-default.navbar-static-top
   .container
+    .navbar-header
+      button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to "Pawlowicze Gramatyki", root_path, class: 'navbar-brand'
     #navbar.navbar-collapse.collapse
-      .navbar-header
-        button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        = link_to "Pawlowicze Gramatyki", root_path, class: 'navbar-brand'
-
       ul.nav.navbar-nav
         = active_link_to "Najlepsze", root_path, active: :exclusive, wrap_tag: 'li'
         = active_link_to "Najnowsze", newest_pawlowiczs_path, wrap_tag: 'li'

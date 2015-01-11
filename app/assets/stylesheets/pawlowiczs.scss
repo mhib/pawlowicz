@@ -36,7 +36,7 @@ html, body
 
 #mark
 {
-  position: absolute;
+  position: fixed;
   bottom: $height;
   left: 0;
   background-color: darken($gray-lighter, 10%);
@@ -133,9 +133,21 @@ html, body
   color: white;
   background-color: black;
   display: none;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-bottom: 2px;
 }
 
 .pawlowicz:hover .score
 {
   display: table;
+}
+
+.pawlowiczs
+{
+  padding-bottom: 30px;
 }

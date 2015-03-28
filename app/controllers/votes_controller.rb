@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def create
     @quote = Quote.find params[:pawlowicz_id]
-    @positive = params[:positive] == "true" ? true : false
+    @positive = (params[:positive] == "true")
     if n = @quote.votes.where(ip: request.remote_ip).first
       @vote = n
       if @vote.positive == @positive

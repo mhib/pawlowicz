@@ -27,8 +27,7 @@ class PawlowiczsController < ApplicationController
   end
 
   def random
-    @quote = Quote.random.first
-    render :show
+    redirect_to pawlowicz_path(Quote.random.first)
   end
 
   private

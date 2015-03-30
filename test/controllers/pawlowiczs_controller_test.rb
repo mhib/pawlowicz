@@ -42,9 +42,9 @@ class PawlowiczsControllerTest < ActionController::TestCase
     assert_template :new
   end
 
-  test "should show random quote" do
+  test "should redirect to random quote" do
     get :random
-    assert_response :success
+    assert_redirected_to %r{pawlowiczs\/\d+\z}
   end
 
 end

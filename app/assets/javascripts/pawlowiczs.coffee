@@ -5,7 +5,7 @@ $ ->
   $('.vote_link').on 'click', (e) ->
     e.preventDefault()
     link = $(this).attr('href')
-    positive = if $(this).hasClass('red') then false else true
+    positive = !$(this).hasClass('red')
     $.ajax {
       type: 'POST',
       url: link,

@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'votes/create'
-
   root 'pawlowiczs#index'
 
   resources :pawlowiczs, only: [:show, :create, :new] do

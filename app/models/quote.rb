@@ -24,4 +24,9 @@ class Quote < ActiveRecord::Base
   def increase_views!
     update_attribute(:views, views + 1)
   end
+
+  def update_vote!
+    v_count = votes.group('positive').count('id')
+    update_attribute(:vote, v_count[true].to_i - v_count[false].to_i)
+  end
 end

@@ -24,6 +24,6 @@ class Vote < ActiveRecord::Base
   private
 
   def update_quote
-    quote.update_attribute(:vote, quote.votes.positive.size - quote.votes.negative.size)
+    quote.update_vote!
   end
 end

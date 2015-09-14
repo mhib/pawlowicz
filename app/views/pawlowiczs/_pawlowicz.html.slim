@@ -9,22 +9,22 @@
             | ~  #{pawlowicz.author}
   .row
     .col-md-12.score
-      | Wyświetlono 
+      | Wyświetlono
       span.views_count data-id="#{pawlowicz.id}"
-        |  #{pawlowicz.views} razy 
-      |  Ocena: 
+        |  #{pawlowicz.views} razy
+      |  Ocena:
       span.vote_rating_count data-id="#{pawlowicz.id}"
         | #{pawlowicz.vote}
-      |  / 
+      |  /
       span.vote_count data-id="#{pawlowicz.id}"
         | #{pawlowicz.votes.size}
       .rate
         = link_to pawlowicz_votes_path(pawlowicz.id), class: 'green vote_link' do
           | plus
-        |  
-        |  czy 
+        |
+        |  czy
         = link_to pawlowicz_votes_path(pawlowicz.id), class: 'red vote_link' do
           | minus
-        |  
+        |
         | ~Magik
 

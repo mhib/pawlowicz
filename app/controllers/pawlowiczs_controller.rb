@@ -4,11 +4,11 @@ class PawlowiczsController < ApplicationController
   end
 
   def index
-    @quotes = Quote.all.order(vote: :desc).paginate(page: params[:page])
+    @quotes = Quote.all.order(vote: :desc).includes(:votes).paginate(page: params[:page])
   end
 
   def newest
-    @quotes = Quote.order(created_at: :desc).paginate(page: params[:page])
+    @quotes = Quote.order(created_at: :desc).includes(:votes).paginate(page: params[:page])
     render 'index'
   end
 
